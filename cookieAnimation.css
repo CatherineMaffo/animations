@@ -1,0 +1,108 @@
+.cardTwo{
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(to bottom right,rgb(46, 206, 46),rgb(228, 60, 60),yellow);
+    margin: 5px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+  .image{
+    position: relative;
+    overflow: hidden;
+    grid-column: 1/2;
+  }
+  img{
+    width: auto;
+    height: 50px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .text{
+    grid-column: 2/4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 5px;
+  }
+  .t1{
+    font-size: 20px;
+  }
+  
+  button{
+    width: 90px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+  }
+  @keyframes animBg {
+    from{
+      transform: scale(0);
+    }
+    to{
+      transform: scale();
+    }
+  }
+  @keyframes animT1 {
+    from{
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    to{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  @keyframes animT2 {
+    from{
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    to{
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  @keyframes animBtn {
+    from{
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    to{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  
+  @keyframes animImage {
+    0%{
+      opacity: 0;
+    }
+    25%{
+      transform: rotate(360deg);
+    }
+    50%{
+      transform: translateY(-50px);
+    }
+    100%{
+      transform: translateY(50px);
+    }
+  }
+  .bgAnimation{
+    animation: animBg 1s ease 1s both;
+  }
+  .t1Animation{
+    animation: animT1 1s ease 3s both;
+  }
+  .t2Animation{
+    animation: animT2 1s ease 2s both;
+  }
+  .btnAnimation{
+    animation: animBtn 1s ease 4s both;
+  }
+  .imageAnimation{
+    animation: animImage 1s ease 5s both infinite;
+  }
+  
